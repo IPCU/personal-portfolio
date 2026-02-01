@@ -72,7 +72,7 @@ I look forward to the opportunity to discuss how my background, skills, and enth
                             </div>
                             <div>
                                 <a href={cvUrl} download className="inline-block bg-accent-cyan text-navy-dark font-bold py-3 px-8 rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-105">
-                                    Download CV
+                                    View CV
                                 </a>
                             </div>
                         </div>
