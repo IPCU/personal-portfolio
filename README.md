@@ -1,5 +1,3 @@
-
-
 # Run and deploy your Portfolio web app
 
 This contains everything you need to run your app locally.
@@ -12,8 +10,7 @@ This contains everything you need to run your app locally.
 1. Install dependencies:
    `npm install`
 
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) if you integrate any AI chatbot or agent in the web app
-Set up environment variables:
+2. Set up environment variables:
        * Create a .env.local file in the root of the project.
        * Add your Supabase and Cloudinary credentials to this file:
            * NEXT_PUBLIC_SUPABASE_URL
@@ -33,4 +30,3 @@ Set up environment variables:
     `npm run dev`
     
   # This will start the development server, and you can view the application at http://localhost:3000.
-  
