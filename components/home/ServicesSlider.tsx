@@ -10,7 +10,7 @@ import type { Service } from '@/types/index';
 import Section from '@/components/shared/Section';
 import { Icons } from '@/components/shared/Icons';
 import ServiceDetailsModal from './ServiceDetailsModal';
-import { createClient } from '@/lib/supabase/client';
+
 
 const ServiceCard: React.FC<{ service: Service; onViewDetails: () => void }> = ({ service, onViewDetails }) => {
     const formatPrice = (price: number, currency: string) => {
@@ -55,30 +55,8 @@ const ServiceCard: React.FC<{ service: Service; onViewDetails: () => void }> = (
     );
 };
 
-const ServicesSlider = () => {
-    const [services, setServices] = useState<Service[]>([]);
+const ServicesSlider = ({ services }: { services: Service[] }) => {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
-
-    useEffect(() => {
-        const fetchServices = async () => {
-            const supabase = createClient();
-            const { data, error } = await supabase
-                .from('services')
-                .select('*')
-                .order('id');
-
-            if (error) {
-                console.error('Error fetching services:', error);
-                return;
-            }
-
-            if (data) {
-                setServices(data);
-            }
-        };
-
-        fetchServices();
-    }, []);
 
     return (
         <>
