@@ -7,8 +7,7 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/shared/Card'; // Assuming a shared Card component exists
-import { Service } from '@/types';
-import { Contact } from '@/types';
+import { Service, ContactMessage as Contact } from '@/types';
 
 async function getServices() {
     const supabase = createClient();
